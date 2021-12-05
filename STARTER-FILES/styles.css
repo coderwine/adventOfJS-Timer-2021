@@ -112,3 +112,33 @@ input[type=text]:disabled {
 .settings:hover {
   opacity: 1;
 }
+
+/* Form styling will be palced in index.js */
+form {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+/* FORM buttons */
+#button-wrap {
+  display: flex;
+  flex-direction: wrap;
+  justify-content: space-around;
+}
+
+#button-wrap button {
+  background-color: slategrey;
+  color: whitesmoke;
+  height: 2em;
+  width: 8rem;
+  margin: 1em;
+  border-radius: 5px;
+}
+
+#button-wrap button:hover {
+  background-color: green;
+  color: black;
+}
+
+

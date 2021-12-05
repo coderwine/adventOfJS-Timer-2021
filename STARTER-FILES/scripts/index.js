@@ -10,6 +10,7 @@ const min = document.querySelector('.minutes').children[0];
 const sec = document.querySelector('.seconds').children[0];
 const ring = document.querySelector('.ring');
 const gear = document.querySelector('.settings');
+const wrapper = document.querySelector('.wrapper');
 
 settingOne.addEventListener('click',checkStatus);
 gear.addEventListener('click', setNewTime);
@@ -68,41 +69,61 @@ function stopFunction () {
 }
 
 function setNewTime () {
+
+    // Checks to see if form is already open.  If true, won't stack.
+    wrapper.children[2] ? wrapper.removeChild(wrapper.children[2]) : null;
+
     // Create Form
-    const wrapper = document.querySelector('.wrapper');
     const div = document.createElement('div');
     const form = document.createElement('form');
     const p = document.createElement('p');
     const inputOne = document.createElement('input');
     const inputTwo = document.createElement('input');
+    const btnWrap = document.createElement('div');
     const btn = document.createElement('button');
     const close = document.createElement('button');
     
+    // console.log(wrapper.children)
+    
+
     // Attributes to Form
     div.style = `
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        height: 200px; 
+        height: 150px; 
         width: 500px; 
         background-color: rgba(0,0,0,.5); 
         position: fixed; 
         bottom: 10px;
         border: .01em solid white;
         border-radius: 10px;
+        padding: .25em;
         `
-    form.setAttribute('onSubmit', (event) => changeTime(event))
-        btn.setAttribute('type', 'submit')
-        btn.innerText = 'Update Time'
-        close.innerText = 'Cancel'
+    form.setAttribute('onSubmit', (event) => changeTime(event));
+    // form.style = `
+    //     display: flex;
+    //     flex-direction: column;
+    //     align-content: space-evenly;
+    //     width: 80%;
+    // `
+    p.innerText = 'Please input your preferred time.';
+    p.style = `color: whitesmoke;`;
+    inputOne.setAttribute('placeholder', 'set minutes');
+    inputTwo.setAttribute('placeholder', 'set seconds');
+    btnWrap.id = 'button-wrap';
+    btn.setAttribute('type', 'submit');
+    btn.innerText = 'Update Time';
+    close.innerText = 'Cancel';
 
     // Build Form 
-    form.appendChild(p)
-    form.appendChild(inputOne)
-    form.appendChild(inputTwo)
-    form.appendChild(close)
-    form.appendChild(btn)
+    form.appendChild(p);
+    form.appendChild(inputOne);
+    form.appendChild(inputTwo);
+    btnWrap.appendChild(close);
+    btnWrap.appendChild(btn);
+    form.appendChild(btnWrap);
     div.appendChild(form);
     wrapper.appendChild(div);
     console.log(form)
