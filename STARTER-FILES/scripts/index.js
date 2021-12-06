@@ -61,6 +61,7 @@ function sandTimer() {
         if (min.value == 00 && sec.value == 00) {
             ring.className = 'ring ending circle'
             stopFunction();
+            alert('End of Timer!!!')
         } else {
             min.value = minutes-1;
             seconds = 59
