@@ -113,14 +113,13 @@ input[type=text]:disabled {
   opacity: 1;
 }
 
-/* Form styling will be palced in index.js */
-form {
-  display: flex;
-  flex-direction: column;
-  width: 80%;
+/* Form Design */
+form input {
+  width: 70%;
+  height: 1rem;
+  margin: .15rem;
 }
 
-/* FORM buttons */
 #button-wrap {
   display: flex;
   flex-direction: wrap;

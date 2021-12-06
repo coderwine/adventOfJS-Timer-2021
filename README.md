@@ -1,3 +1,12 @@
+# My Notes
+Although this is meant as an **adventOfJS**, I took this as an opportunity to have something to tinker with on a regular basis.  This is challenge one. I intend to continue to work through the other challenges (saving them as such to my workstation) as minor side projects. 
+
+This was a lot of fun! My goal was to do this 100% in JavaScript alone; however, I decided to alter the CSS very minimally to desgin the form that populates when a user wishes to alter the time on the stopwatch.  Everything else is built without touching the original code.
+
+Below are the details of what this particular challenge consist of.  I've left varied notes within my own build in hopes to make it as clear to follow.  Mind you, I did not pause to really map the data flow and essentially built through various trial and error until the results were found.  This, of course, results in perhaps not the best methods.  However, I'm glad to have knocked this out!
+
+
+---
 # Brief
 
 In this project, we're creating a Pomodoro timer.
@@ -35,3 +44,4 @@ You can use as many (or as few) tools, libraries, and frameworks as you'd like. 
     - Check out the [Learn Build Teach Discord.](http://learnbuidteach.com) We have a specific channel set up, just for the Advent of JavaScript.
 - Can I use this project in my portfolio?
     - Sure! But, be honest about the work that *you* did
+
